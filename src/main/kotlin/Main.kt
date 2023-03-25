@@ -51,6 +51,17 @@ fun main(args: Array<String>) {
     val p: TestClass? = isEven5(0) ?: TestClass(false)
 // Элвис-оператор (если вернёт null, то будет использовано значение српава после оператор)
 
+    val car = Car("black", 10000.0f, 300.0f)     // в котлине нет new
+    println(car)
+    car.load()
+    println(car)
+
+    val car2 = Car(color = "black", price = 300.0f)       // именованные аргументы (остальные - по умолчанию)
+
+    val truck = Truck("Red", 20000.0f, 120.0f)
+    println(truck)
+    truck.load()
+    println(truck)
 }
 
 fun sum(a: Int, b: Int): Int {
